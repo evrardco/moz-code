@@ -10,14 +10,21 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.buildAndRunOz"
+		"onCommand:extension.buildAndRunOz",
+		"onCommand:extension.feedSelection"
+
 	],
 	"main": "./extension.js",
 	"contributes": {
-		"commands": [{
-            "command": "extension.buildAndRunOz",
-			"title": "Build and Run Oz project"
-		}]
+		"commands": [
+			{
+            	"command": "extension.buildAndRunOz",
+				"title": "Build and Run Oz project"
+			},
+			{
+            	"command": "extension.feedSelection",
+				"title": "Feed selection"
+			}]
 	},
 	"scripts": {
 		"postinstall": "node ./node_modules/vscode/bin/install",
